@@ -5,6 +5,8 @@ import pandas as pd
 from pyspark.sql import SparkSession
 from tkinter import Tk, Text, Scrollbar, Button, END, filedialog, simpledialog
 
+from src.etl.extract import extract_data
+from etl.transform import transform_data
 # Устанавливаем базовый путь к проекту, используя текущий файл
 base_path = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -52,7 +54,7 @@ logger = logging.getLogger(__name__)
 
 
 
-def extract_data(spark, config):
+"""def extract_data(spark, config):
     # Загрузка данных с помощью Pandas для проверки на дубликаты
     products_df = pd.read_csv(config['data']['products_path'])
     categories_df = pd.read_csv(config['data']['categories_path'])
@@ -67,25 +69,9 @@ def extract_data(spark, config):
     spark_categories_df = spark.createDataFrame(categories_df)
     spark_product_category_df = spark.createDataFrame(product_category_df)
 
-    return spark_products_df, spark_categories_df, spark_product_category_df
+    return spark_products_df, spark_categories_df, spark_product_category_df"""
 
 
-def transform_data(products_df, categories_df, product_category_df):
-    product_category_pairs_df = product_category_df.join(
-        products_df, on="product_id", how="inner"
-    ).join(
-        categories_df, on="category_id", how="inner"
-    ).select(
-        products_df.product_name, categories_df.category_name
-    )
-
-    products_without_categories_df = products_df.join(
-        product_category_df, on="product_id", how="left_anti"
-    ).select(
-        products_df.product_name
-    )
-
-    return product_category_pairs_df, products_without_categories_df
 
 
 def edit_csv_file(file_path):
