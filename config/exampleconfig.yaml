@@ -1,0 +1,9 @@
+data:
+  products_path: "path_to_products.csv"
+  categories_path: "path_to_categories.csv"
+  product_category_path: "path_to_product_category.csv"
+
+
+output:
+  product_category_pairs: "path_to_product_category_pairs"
+  product_no_category: "path_to_product_no_category"

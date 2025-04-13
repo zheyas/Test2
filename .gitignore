@@ -1,0 +1,35 @@
+
+# Общие файлы и папки
+__pycache__/
+*.py[cod]
+*$py.class
+.DS_Store
+
+# Логи
+logs/
+*.log
+
+# Конфигурационные файлы
+config.yaml
+
+# Результаты данных и временные файлы
+*.csv
+*.tmp
+
+# Файлы виртуального окружения
+venv/
+.env
+.envrc
+.pipenv
+Pipfile.lock
+
+# Spark специфичные файлы
+metastore_db/
+derby.log
+
+# Файлы IDE и редакторов
+.idea/
+.vscode/
+
+# Файлы Jupyter Notebook
+.ipynb_checkpoints/
