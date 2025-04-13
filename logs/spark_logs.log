@@ -68,3 +68,10 @@
 2025-04-11 14:20:57,507 - __main__ - INFO - Начало трансформации данных
 2025-04-11 14:20:57,575 - __main__ - INFO - Процесс завершен. Отображение результатов.
 2025-04-11 14:21:08,028 - py4j.clientserver - INFO - Closing down clientserver connection
+2025-04-13 16:27:44,732 - __main__ - INFO - Found file: /Users/evgenijasakov/Test2/data/raw/products.csv
+2025-04-13 16:27:44,732 - __main__ - INFO - Found file: /Users/evgenijasakov/Test2/data/raw/categories.csv
+2025-04-13 16:27:44,732 - __main__ - INFO - Found file: /Users/evgenijasakov/Test2/data/raw/product_category.csv
+2025-04-13 16:27:44,732 - __main__ - INFO - Начало извлечения данных
+2025-04-13 16:27:45,793 - __main__ - INFO - Начало трансформации данных
+2025-04-13 16:27:45,864 - __main__ - INFO - Процесс завершен. Отображение результатов.
+2025-04-13 16:27:59,391 - py4j.clientserver - INFO - Closing down clientserver connection
